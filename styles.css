@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 26px;
+}
+
+.nav-list li a,
+.nav-list {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.banner-1 {
+  width: 50%;
+  height: 50%;
+}
