@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
+  font-weight: 400; /* Normal */
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
+  font-weight: 700; /* Bold */
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Light.otf") format("opentype");
+  font-weight: 300; /* Light */
+}
+
+/* Áp dụng font */
+body {
+  font-family: "SVN-Gilroy", sans-serif;
+}
+
+.section {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.section-main-banner {
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
+}
+
+.section-main-banner .container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.section-main-banner .section-title {
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 68px;
+  text-transform: capitalize;
+  color: #002a48;
+}
+
+.section-main-banner .section-subtitle {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #002a48;
+}
+.section-main-banner .section-image {
+  width: 944px;
+  height: 693px;
+  top: 84px;
+  left: 530px;
+}
