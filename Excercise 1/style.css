@@ -18,19 +18,19 @@
   margin: 0 auto;
 }
 
-.section-header {
+.section-products .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 60px;
 }
 
-.section-info {
+.section-products .section-info {
   width: 367px;
   height: 62px;
 }
 
-.section-subtitle {
+.section-products .section-subtitle {
   width: 91px;
   height: 24px;
   font-weight: 500;
@@ -39,7 +39,7 @@
   margin: 0;
 }
 
-.section-title {
+.section-products .section-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
@@ -72,7 +72,7 @@
   height: 6.67px;
 }
 
-.section-content {
+.section-products .section-content {
   padding: 28px 0 60px 0;
 }
 
