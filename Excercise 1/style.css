@@ -1,3 +1,4 @@
+/* general setting */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,63 @@
   font-size: 100%;
 }
 
-.section {
-  font-family: SVN-Gilroy;
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+body,
+button,
+input {
+  font-family: "SVN-Gilroy", sans-serif;
+}
+
+.btn {
+  width: auto;
+  height: 44px;
+  padding: 12px 28px;
+  border-radius: 57px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  border: 1.5px solid #003459;
+  color: #fdfdfd;
+  background-color: #003459;
+  padding: 14px 28px 12px 28px;
+}
+.btn-outline {
+  padding: 14px 28px 12px 28px;
+  border: 1.5px solid #003459;
+  background-color: transparent;
+}
+
+/* Style list pet */
 
 .container {
   max-width: 1180px;
@@ -31,7 +83,7 @@
 }
 
 .section-products .section-subtitle {
-  width: 91px;
+  width: fit-content;
   height: 24px;
   font-weight: 500;
   font-size: 16px;
@@ -45,26 +97,6 @@
   line-height: 36px;
   color: #003459;
   margin: 0;
-}
-
-.btn {
-  width: 151px;
-  height: 44px;
-  padding: 12px 28px;
-  border-radius: 57px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-outline {
-  border: 1.5px solid #003459;
-  color: #003459;
-  background-color: transparent;
 }
 
 .arrow-icon {
