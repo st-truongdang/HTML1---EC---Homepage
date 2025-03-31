@@ -1,0 +1,175 @@
+// Set var color
+$primary: #003459;
+
+/* general setting */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("./assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+body,
+button,
+input {
+  font-family: "SVN-Gilroy", sans-serif;
+}
+
+.btn {
+  width: auto;
+  height: 44px;
+  padding: 12px 28px;
+  border-radius: 57px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1.5px solid $primary;
+}
+
+.section-products {
+  .container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 60px;
+
+      .section-info {
+        .section-subtitle {
+          width: fit-content;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 0;
+        }
+
+        .section-title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 36px;
+          color: #003459;
+          margin: 0;
+        }
+      }
+
+      button {
+        .arrow-icon {
+          width: 3.33px;
+          height: 6.67px;
+          padding: 9px 9px;
+        }
+      }
+    }
+
+    .section-content {
+      padding: 28px 0 60px 0;
+
+      .list-products {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .list-item {
+          padding: 8px 8px 0 8px;
+          box-shadow: 0px 4px 28px -2px #00000014;
+          border-radius: 12px;
+
+          .card {
+            text-decoration: none;
+
+            .card-image {
+              height: 264px;
+
+              img {
+                border-radius: 10px;
+              }
+            }
+
+            .card-content {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              padding: 14px 8px 20px 8px;
+
+              .card-title {
+                color: #00171f;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+              }
+
+              .card-information {
+                display: flex;
+                gap: 4px;
+
+                .card-variant {
+                  color: #667479;
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 18px;
+                }
+
+                .dot {
+                  color: #667479;
+                  position: relative;
+                  top: -4px;
+                  font-size: 15px;
+                }
+
+                .card-option {
+                  color: #667479;
+                  font-weight: 700;
+                }
+              }
+
+              .card-price {
+                color: #00171f;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
