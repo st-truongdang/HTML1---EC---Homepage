@@ -53,22 +53,22 @@ a {
 
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("../../assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
+  src: url("../assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
   font-weight: 400;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("../../assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
+  src: url("../assets/fonts/SVN-Gilroy-Bold.otf") format("opentype");
   font-weight: 700;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("../../assets/fonts/SVN-Gilroy-Light.otf") format("opentype");
+  src: url("../assets/fonts/SVN-Gilroy-Light.otf") format("opentype");
   font-weight: 300;
 }
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("../../assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
+  src: url("../assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
   font-weight: 500;
 }
 body {
@@ -367,53 +367,117 @@ body {
   text-decoration: none;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-image {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-image {
   height: 264px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-image img {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-image
+  img {
   border-radius: 10px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content {
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding: 14px 8px 20px 8px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content .card-title {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content
+  .card-title {
   color: #00171f;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content .card-information {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content
+  .card-information {
   display: flex;
   gap: 4px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content .card-information .card-variant {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content
+  .card-information
+  .card-variant {
   color: #667479;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content .card-information .dot {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content
+  .card-information
+  .dot {
   color: #667479;
   position: relative;
   top: -4px;
   font-size: 15px;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content .card-information .card-option {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content
+  .card-information
+  .card-option {
   color: #667479;
   font-weight: 700;
 }
 
-.section-products .container .section-content .list-products .list-item .card .card-content .card-price {
+.section-products
+  .container
+  .section-content
+  .list-products
+  .list-item
+  .card
+  .card-content
+  .card-price {
   color: #00171f;
   font-weight: 700;
   font-size: 14px;
