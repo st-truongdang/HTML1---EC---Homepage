@@ -233,9 +233,10 @@ input {
 }
 .section-main-banner .section-image {
   width: 100%;
-  min-height: 100%;
+  min-height: 695px;
   position: absolute;
   top: 0;
+  height: 100%;
   left: 0;
 }
 
