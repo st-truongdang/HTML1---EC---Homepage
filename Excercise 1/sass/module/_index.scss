@@ -1,7 +1,7 @@
 @forward "./button";
-@use "./card";
-@use "./form";
-@use "./banner";
-@use "./input";
-@use "./navigation";
-@use "./switcher";
+@forward "./card";
+@forward "./form";
+@forward "./banner";
+@forward "./input";
+@forward "./navigation";
+@forward "./switcher";
