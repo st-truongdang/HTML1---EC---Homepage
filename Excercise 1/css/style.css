@@ -3,6 +3,8 @@
   padding: 0;
   border: 0;
   font-size: 100%;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -73,6 +75,10 @@ a {
 }
 body {
   font-family: "SVN-Gilroy", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

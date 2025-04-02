@@ -1,4 +1,9 @@
+@use "./base/variables" as *;
 @use "./base/index" as *;
 @use "./module/index" as *;
 @use "./layout/index" as *;
 @use "./pages/index" as *;
+
+h1 {
+  font-size: $text-4xl;
+}
