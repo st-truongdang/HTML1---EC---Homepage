@@ -1,4 +1,6 @@
-@use "./reset";
-@use "./base";
-@use "./typography";
+@forward "./reset";
+@forward "./base";
 @forward "./variables";
+@forward "./font";
+@forward "./extends.scss";
+@forward "./mixins";

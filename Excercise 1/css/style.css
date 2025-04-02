@@ -53,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "SVN-Gilroy", sans-serif;
+}
+
 @font-face {
   font-family: "SVN-Gilroy";
   src: url("../assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
@@ -72,13 +76,6 @@ a {
   font-family: "SVN-Gilroy";
   src: url("../assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
   font-weight: 500;
-}
-body {
-  font-family: "SVN-Gilroy", sans-serif;
-}
-
-h1 {
-  font-size: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
