@@ -1,14 +1,15 @@
 // Set var color
 $color-primary: #003459;
-$color-secondary: #002a48;
-$color-white: #fdfdfd;
+$color-primary-dark: #002a48;
+$color-secondary: #fceed5;
+$color-white: #ffffff;
+$color-white-secondary: #fdfdfd;
 $color-black: #000000;
-$color-black-1: #00171f;
+$color-black-secondary: #00171f;
 $color-grey: #99a2a5;
 $color-gray: #667479;
 $color-normal: #242b33;
-$color-badge: #00a7e7;
-$color-gift: #fceed5;
+$color-info: #00a7e7;
 
 //set font family
 $font-primary: "SVN-Gilroy", sans-serif;
@@ -31,3 +32,13 @@ $lh-lg: 36px;
 $lh-base: 24px;
 $lh-sm: 20px;
 $lh-xs: 18px;
+
+//set spacing
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-base: 16px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+$spacing-xxl: 28px;
+$spacing-3xl: 40px;
