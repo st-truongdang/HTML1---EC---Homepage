@@ -1,0 +1,88 @@
+@use "../base/index" as *;
+
+.card {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+
+  &-image {
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 8px;
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: $text-base;
+    line-height: $lh-base;
+    color: $color-black-secondary;
+  }
+  &-information {
+    display: flex;
+    gap: 4px;
+
+    .dot {
+      padding: 0 6px;
+      font-size: $text-base;
+      color: $color-gray;
+    }
+  }
+  &-variant {
+    display: flex;
+    gap: 6px;
+    font-weight: 500;
+    font-size: $text-xs;
+    line-height: $lh-xs;
+    color: $color-gray;
+  }
+  &-option {
+    font-weight: 700;
+    color: $color-gray;
+  }
+  &-price {
+    font-weight: 700;
+    font-size: $text-sm;
+    line-height: $lh-sm;
+    color: $color-black-secondary;
+  }
+  &-gift {
+    display: flex;
+    vertical-align: bottom;
+    padding: 8px;
+    gap: 4px;
+    margin: 0 8px 8px;
+    border-radius: 8px;
+
+    background-color: $color-secondary;
+    font-weight: 700;
+    font-size: $text-sm;
+    line-height: $lh-sm;
+    color: $color-primary-dark;
+  }
+
+  &-tag {
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 28px;
+
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    background-color: $color-info;
+    color: $color-white-secondary;
+  }
+
+  &-description {
+    width: 100%;
+    font-size: $text-sm;
+    line-height: $lh-sm;
+    text-overflow: ellipsis;
+    color: $color-normal;
+  }
+}
