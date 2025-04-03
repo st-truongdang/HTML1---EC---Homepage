@@ -1,0 +1,62 @@
+@use "../base/variables" as base;
+
+.footer {
+  .container {
+    padding: 40px 16px;
+  }
+}
+
+.footer-container {
+  padding: 40px 0;
+
+  .footer-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 32px;
+
+    border-radius: 16px;
+    background-color: base.$color-primary;
+
+    .text-subscribe {
+      font-size: base.$text-lg;
+      font-weight: 700;
+      line-height: base.$lh-lg;
+      color: base.$color-white-secondary;
+    }
+
+    .form-subscribe {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      width: 707px;
+      padding: 12px;
+      border-radius: 14px;
+      background-color: base.$color-white-secondary;
+
+      input {
+        width: 100%;
+        padding: 14px 28px;
+        font-size: 14px;
+        line-height: 20px;
+
+        border: 1px solid base.$color-grey;
+        border-radius: 8px;
+      }
+
+      button {
+        width: 208px;
+        padding: 14px 28px;
+
+        font-size: base.$text-base;
+        line-height: base.$lh-base;
+        font-weight: 500;
+
+        border-radius: 8px;
+        background-color: base.$color-primary;
+        color: base.$color-white-secondary;
+      }
+    }
+  }
+}

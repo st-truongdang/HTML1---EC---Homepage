@@ -1,0 +1,25 @@
+@use "../base/index" as *;
+
+.btn {
+  width: auto;
+  padding: 12px 28px;
+  border-radius: 57px;
+  font-size: $text-sm;
+  line-height: $lh-sm;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &-primary {
+    border: 1.5px solid transparent;
+    color: $color-white-secondary;
+    background-color: $color-primary;
+  }
+
+  &-outline {
+    border: 1.5px solid $color-primary;
+    background-color: transparent;
+  }
+}

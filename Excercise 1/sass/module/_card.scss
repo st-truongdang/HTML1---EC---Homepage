@@ -1,0 +1,53 @@
+@use "../base/index" as *;
+
+.card {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+
+  &-image {
+    aspect-ratio: 1/1;
+    height: 100%;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 8px 12px 8px;
+  }
+
+  &-title {
+    color: #00171f;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &-information {
+    display: flex;
+    gap: 4px;
+  }
+  &-variant {
+    display: flex;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #667479;
+  }
+  .dot {
+    font-size: 15px;
+    padding: 0 6px;
+    color: #667479;
+  }
+  &-option {
+    color: #667479;
+    font-weight: 700;
+  }
+  &-price {
+    color: #00171f;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

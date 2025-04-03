@@ -13,8 +13,6 @@
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
   }
 
   .header-nav {
@@ -39,11 +37,11 @@
   .search-bar {
     display: flex;
     gap: base.$spacing-sm;
-    padding: 12px 20px 12px 16px;
+    padding: 12px 20px;
+
     background: #fdfdfd;
     border-radius: 16px;
     width: 280px;
-    box-sizing: border-box;
 
     img {
       width: 16.67px;
@@ -51,35 +49,22 @@
     }
   }
 
-  .search-bar input {
-    font-weight: 500;
-    font-size: base.$text-sm;
-    line-height: 20px;
-    color: #99a2a5;
-  }
-
-  .header-action button {
-    width: 203px;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: base.$lh-base;
-    padding: 14px 28px;
-  }
-
   .switcher-currency {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 10px 8px 8px 8px;
+    padding: 10px 8px 8px;
 
     .sw-currency {
-      color: base.$color-primary-dark;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 23px;
       width: 33px;
       height: 23px;
       padding: 0 4px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+
+      color: base.$color-primary-dark;
     }
 
     .arrow-icon {

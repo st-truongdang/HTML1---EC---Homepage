@@ -9,7 +9,7 @@ $gap: 20px;
 
 @for $i from 1 through $columns {
   .col-#{$i} {
-    width: calc((100% - (12 / $i - 1) * $gap) / calc(12 / $i));
+    width: calc((100% - (12 / $i - 1) * $gap) / (12 / $i));
   }
 }
 
@@ -17,7 +17,7 @@ $gap: 20px;
 @media screen and (min-width: 576px) {
   @for $i from 1 through $columns {
     .col-sm-#{$i} {
-      width: calc(100% - (12 / $i - 1) * $gap) / calc(12 / $i);
+      width: calc((100% - (12 / $i - 1) * $gap) / (12 / $i));
     }
   }
 }
@@ -25,7 +25,7 @@ $gap: 20px;
 @media screen and (min-width: 768px) {
   @for $i from 1 through $columns {
     .col-md-#{$i} {
-      width: calc(100% - (12 / $i - 1) * $gap) / calc(12 / $i);
+      width: calc((100% - (12 / $i - 1) * $gap) / (12 / $i));
     }
   }
 }

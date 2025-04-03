@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  .section-image {
+    width: 100%;
+  }
+
+  .section-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #003459;
+    margin: 0;
+  }
+
+  .section-subtitle {
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .section-content {
+    padding: 14px 0;
+  }
+
+  .section-btns {
+    display: flex;
+    gap: 20px;
+  }
+}

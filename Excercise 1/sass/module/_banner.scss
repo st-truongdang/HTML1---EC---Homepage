@@ -1,0 +1,57 @@
+@use "../base/index" as *;
+
+.section.section-main-banner {
+  .section-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .section-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    width: 100%;
+    gap: 24px;
+    z-index: 2;
+  }
+
+  .section-title {
+    font-weight: 800;
+    font-size: $text-4xl;
+    line-height: $lh-3xl;
+    text-transform: capitalize;
+    color: #002a48;
+  }
+
+  .section-subtitle {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: #002a48;
+    display: block;
+  }
+
+  .section-desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: 480px;
+  }
+}
