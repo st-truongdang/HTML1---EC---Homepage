@@ -55,6 +55,8 @@ a {
 
 body {
   font-family: "SVN-Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @font-face {
@@ -80,22 +82,23 @@ body {
 .card {
   display: block;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
 }
 .card-image {
   height: 100%;
   aspect-ratio: 1/1;
+  margin-bottom: 8px;
 }
 .card-content {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 14px 8px;
+  padding: 8px;
+  padding-bottom: 12px;
 }
 .card-title {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
   color: #00171f;
 }
 .card-information {
@@ -105,6 +108,7 @@ body {
 .card-information .dot {
   padding: 0 6px;
   font-size: 16px;
+  line-height: 18px;
   color: #667479;
 }
 .card-variant {
@@ -127,10 +131,9 @@ body {
 }
 .card-gift {
   display: flex;
-  vertical-align: bottom;
-  padding: 8px;
   gap: 4px;
-  margin: 0 8px 8px;
+  margin-top: 6px;
+  padding: 8px;
   border-radius: 8px;
   background-color: #fceed5;
   font-weight: 700;
@@ -139,21 +142,30 @@ body {
   color: #002a48;
 }
 .card-tag {
-  width: fit-content;
+  display: flex;
+  margin-bottom: 6px;
+}
+.card-tag span {
   padding: 2px 10px;
   border-radius: 28px;
+  background-color: #00a7e7;
   font-size: 10px;
   font-weight: 700;
   line-height: 16px;
-  background-color: #00a7e7;
   color: #fdfdfd;
 }
 .card-description {
+  display: -webkit-box;
   width: 100%;
+  margin-top: 2px;
   font-size: 14px;
   line-height: 20px;
   text-overflow: ellipsis;
   color: #242b33;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .container {
@@ -297,18 +309,6 @@ body {
   .col-sm-12 {
     width: calc((100% - 0 * 20px) / 1);
   }
-}
-.list-products {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.list-item {
-  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
-  border-radius: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,7 @@
+@use "./variables" as *;
+
 body {
-  font-family: "SVN-Gilroy", sans-serif;
+  font-family: $font-primary;
+  font-size: $text-base;
+  line-height: $lh-base;
 }
