@@ -1,0 +1,9 @@
+@use "../base/index" as *;
+
+.section-products {
+  .section-content {
+    .card {
+      padding-bottom: 12px;
+    }
+  }
+}

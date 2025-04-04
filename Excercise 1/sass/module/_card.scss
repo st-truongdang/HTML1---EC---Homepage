@@ -4,7 +4,7 @@
   display: block;
   padding: 8px;
   border-radius: 12px;
-  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
+  box-shadow: 0px 4px 28px -2px #00000014;
 
   &-image {
     height: 100%;
@@ -17,7 +17,6 @@
     flex-direction: column;
     gap: 4px;
     padding: 8px;
-    padding-bottom: 12px;
   }
 
   &-title {
@@ -31,7 +30,6 @@
 
     .dot {
       padding: 0 6px;
-      font-size: $text-base;
       line-height: $lh-xs;
       color: $color-gray;
     }
@@ -60,8 +58,8 @@
 
   &-gift {
     display: flex;
-    gap: 4px;
-    margin-top: 6px;
+    gap: 2px;
+    margin-top: 10px;
     padding: 8px;
     border-radius: 8px;
     background-color: $color-secondary;
@@ -69,19 +67,24 @@
     font-size: $text-sm;
     line-height: $lh-sm;
     color: $color-primary-dark;
+    .dot {
+      padding: 0 6px;
+      line-height: $lh-xs;
+      color: $color-primary;
+    }
   }
 
   &-tag {
     display: flex;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 
     span {
       padding: 2px 10px;
       border-radius: 28px;
       background-color: $color-info;
-      font-size: 10px;
+      font-size: $text-2xs;
       font-weight: 700;
-      line-height: 16px;
+      line-height: $lh-2xs;
       color: $color-white-secondary;
     }
   }
@@ -89,7 +92,7 @@
   &-description {
     display: -webkit-box;
     width: 100%;
-    margin-top: 2px;
+    margin-top: 6px;
     font-size: $text-sm;
     line-height: $lh-sm;
     text-overflow: ellipsis;
