@@ -1,4 +1,4 @@
-@use "../base/variables" as base;
+@use "../base/variables" as *;
 
 .header {
   background: transparent;
@@ -8,7 +8,10 @@
   right: 0;
   bottom: 0;
   z-index: 10;
-  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 30px 0;
 
   .container {
     display: flex;
@@ -20,6 +23,7 @@
     justify-content: center;
     align-items: center;
     gap: 48px;
+    height: max-content;
     z-index: 2;
 
     .logo {
@@ -32,11 +36,17 @@
     justify-content: center;
     align-items: center;
     gap: 14px;
+
+    button {
+      height: 44px;
+      font-size: $text-base;
+      line-height: $lh-base;
+    }
   }
 
   .search-bar {
     display: flex;
-    gap: base.$spacing-sm;
+    gap: $spacing-sm;
     padding: 12px 20px;
 
     background: #fdfdfd;
@@ -64,12 +74,11 @@
       font-size: 16px;
       line-height: 23px;
 
-      color: base.$color-primary-dark;
+      color: $color-primary-dark;
     }
 
     .arrow-icon {
-      width: 6px;
-      height: 3px;
+      padding: 10px 12px;
     }
   }
 }
