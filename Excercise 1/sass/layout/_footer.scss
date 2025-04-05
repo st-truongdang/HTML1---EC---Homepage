@@ -1,13 +1,54 @@
-@use "../base/variables" as base;
+@use "../base/variables" as *;
 
 .footer {
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
+
   .container {
     padding: 40px 16px;
+  }
+
+  .footer-copyright {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    height: 100%;
+
+    .footer-authorized {
+      font-size: $text-sm;
+      line-height: $lh-sm;
+      color: $color-gray;
+    }
+
+    .list-footer {
+      display: flex;
+      gap: 30px;
+    }
+
+    .footer-link {
+      font-size: $text-sm;
+      line-height: $lh-sm;
+      color: $color-gray;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
   }
 }
 
 .footer-container {
+  margin-bottom: 40px;
   padding: 40px 0;
+  border-bottom: 1px solid $color-border;
 
   .footer-subscribe {
     display: flex;
@@ -15,15 +56,15 @@
     align-items: center;
     gap: 20px;
     padding: 32px;
-
+    margin-bottom: 40px;
     border-radius: 16px;
-    background-color: base.$color-primary;
+    background-color: $color-primary;
 
     .text-subscribe {
-      font-size: base.$text-lg;
+      font-size: $text-lg;
       font-weight: 700;
-      line-height: base.$lh-lg;
-      color: base.$color-white-secondary;
+      line-height: $lh-lg;
+      color: $color-white-secondary;
     }
 
     .form-subscribe {
@@ -33,7 +74,7 @@
       width: 707px;
       padding: 12px;
       border-radius: 14px;
-      background-color: base.$color-white-secondary;
+      background-color: $color-white-secondary;
 
       input {
         width: 100%;
@@ -41,22 +82,30 @@
         font-size: 14px;
         line-height: 20px;
 
-        border: 1px solid base.$color-grey;
+        border: 1px solid $color-grey;
         border-radius: 8px;
       }
 
       button {
         width: 208px;
         padding: 14px 28px;
-
-        font-size: base.$text-base;
-        line-height: base.$lh-base;
+        font-size: $text-base;
+        line-height: $lh-base;
         font-weight: 500;
-
         border-radius: 8px;
-        background-color: base.$color-primary;
-        color: base.$color-white-secondary;
+        background-color: $color-primary;
+        color: $color-white-secondary;
       }
+    }
+  }
+
+  .footer-navigation {
+    display: flex;
+    justify-content: space-between;
+
+    .list-social {
+      display: flex;
+      gap: 40px;
     }
   }
 }
