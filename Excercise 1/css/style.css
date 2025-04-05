@@ -55,6 +55,8 @@ a {
 
 body {
   font-family: "SVN-Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @font-face {
@@ -77,6 +79,97 @@ body {
   src: url("../assets/fonts/SVN-Gilroy-Medium.otf") format("opentype");
   font-weight: 500;
 }
+.card {
+  display: block;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.0784313725);
+}
+.card-image {
+  height: 100%;
+  margin-bottom: 8px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+.card-title {
+  font-weight: 700;
+  color: #00171f;
+}
+.card-information {
+  display: flex;
+  gap: 4px;
+}
+.card-information .dot {
+  padding: 0 6px;
+  line-height: 18px;
+  color: #667479;
+}
+.card-variant {
+  display: flex;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #667479;
+}
+.card-option {
+  font-weight: 700;
+  color: #667479;
+}
+.card-price {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #00171f;
+}
+.card-gift {
+  display: flex;
+  gap: 2px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #fceed5;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #002a48;
+}
+.card-gift .dot {
+  padding: 0 6px;
+  line-height: 18px;
+  color: #003459;
+}
+.card-tag {
+  display: flex;
+  margin-bottom: 10px;
+}
+.card-tag span {
+  padding: 2px 10px;
+  border-radius: 28px;
+  background-color: #00a7e7;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fdfdfd;
+}
+.card-description {
+  display: -webkit-box;
+  width: 100%;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  color: #242b33;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .container {
   max-width: 1212px;
   width: 100%;
@@ -92,7 +185,6 @@ body {
 
 .col {
   flex: 1;
-  padding: 20px;
 }
 
 .col-1 {
@@ -145,79 +237,44 @@ body {
 
 @media screen and (max-width: 576px) {
   .col-sm-1 {
-    width: calc((100% - 11 * 20px) / 12);
+    width: calc((100% - 11 * 12px) / 12);
   }
   .col-sm-2 {
-    width: calc((100% - 5 * 20px) / 6);
+    width: calc((100% - 5 * 12px) / 6);
   }
   .col-sm-3 {
-    width: calc((100% - 3 * 20px) / 4);
+    width: calc((100% - 3 * 12px) / 4);
   }
   .col-sm-4 {
-    width: calc((100% - 2 * 20px) / 3);
+    width: calc((100% - 2 * 12px) / 3);
   }
   .col-sm-5 {
-    width: calc((100% - 1.4 * 20px) / 2.4);
+    width: calc((100% - 1.4 * 12px) / 2.4);
   }
   .col-sm-6 {
-    width: calc((100% - 1 * 20px) / 2);
+    width: calc((100% - 1 * 12px) / 2);
   }
   .col-sm-7 {
-    width: calc((100% - 0.7142857143 * 20px) / 1.7142857143);
+    width: calc((100% - 0.7142857143 * 12px) / 1.7142857143);
   }
   .col-sm-8 {
-    width: calc((100% - 0.5 * 20px) / 1.5);
+    width: calc((100% - 0.5 * 12px) / 1.5);
   }
   .col-sm-9 {
-    width: calc((100% - 0.3333333333 * 20px) / 1.3333333333);
+    width: calc((100% - 0.3333333333 * 12px) / 1.3333333333);
   }
   .col-sm-10 {
-    width: calc((100% - 0.2 * 20px) / 1.2);
+    width: calc((100% - 0.2 * 12px) / 1.2);
   }
   .col-sm-11 {
-    width: calc((100% - 0.0909090909 * 20px) / 1.0909090909);
+    width: calc((100% - 0.0909090909 * 12px) / 1.0909090909);
   }
   .col-sm-12 {
-    width: calc((100% - 0 * 20px) / 1);
+    width: calc((100% - 0 * 12px) / 1);
   }
 }
-@media screen and (max-width: 768px) {
-  .col-md-1 {
-    width: calc((100% - 11 * 20px) / 12);
-  }
-  .col-md-2 {
-    width: calc((100% - 5 * 20px) / 6);
-  }
-  .col-md-3 {
-    width: calc((100% - 3 * 20px) / 4);
-  }
-  .col-md-4 {
-    width: calc((100% - 2 * 20px) / 3);
-  }
-  .col-md-5 {
-    width: calc((100% - 1.4 * 20px) / 2.4);
-  }
-  .col-md-6 {
-    width: calc((100% - 1 * 20px) / 2);
-  }
-  .col-md-7 {
-    width: calc((100% - 0.7142857143 * 20px) / 1.7142857143);
-  }
-  .col-md-8 {
-    width: calc((100% - 0.5 * 20px) / 1.5);
-  }
-  .col-md-9 {
-    width: calc((100% - 0.3333333333 * 20px) / 1.3333333333);
-  }
-  .col-md-10 {
-    width: calc((100% - 0.2 * 20px) / 1.2);
-  }
-  .col-md-11 {
-    width: calc((100% - 0.0909090909 * 20px) / 1.0909090909);
-  }
-  .col-md-12 {
-    width: calc((100% - 0 * 20px) / 1);
-  }
+.section-products .section-content .card {
+  padding-bottom: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
