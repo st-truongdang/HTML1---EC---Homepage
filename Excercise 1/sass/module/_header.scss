@@ -1,0 +1,81 @@
+@use "../base/index" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 30px 0;
+  background: transparent;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    height: max-content;
+    z-index: 2;
+
+    .logo {
+      height: 40px;
+    }
+  }
+
+  .header-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    button {
+      height: 44px;
+      font-size: $text-base;
+      line-height: $lh-base;
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    gap: $spacing-sm;
+    width: 280px;
+    padding: 12px 20px;
+    border-radius: 16px;
+    background: #fdfdfd;
+
+    img {
+      width: 16.67px;
+      height: 16.67px;
+    }
+  }
+
+  .switcher-currency {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 8px 8px;
+
+    .sw-currency {
+      width: 33px;
+      height: 23px;
+      padding: 0 4px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+      color: $color-primary-dark;
+    }
+
+    .arrow-icon {
+      padding: 10px 12px;
+    }
+  }
+}
