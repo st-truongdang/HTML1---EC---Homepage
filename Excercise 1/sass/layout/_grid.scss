@@ -1,9 +1,13 @@
-@use "../base/variables" as *;
+@use "../base/index" as *;
 
 .row {
   display: flex;
   gap: $gap;
   flex-wrap: wrap;
+
+  @include respond(sm) {
+    gap: $gap-sm;
+  }
 }
 
 .col {

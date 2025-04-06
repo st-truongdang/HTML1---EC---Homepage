@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use "../base/index" as *;
 
 .footer {
   background: linear-gradient(
@@ -10,6 +10,10 @@
 
   .container {
     padding: 40px 16px;
+
+    @include respond(sm) {
+      padding: 0 16px;
+    }
   }
 
   .footer-copyright {
@@ -20,10 +24,21 @@
     min-height: 40px;
     height: 100%;
 
+    @include respond(sm) {
+      flex-direction: column-reverse;
+      padding-bottom: 20px;
+      gap: 8px;
+    }
+
     .footer-authorized {
       font-size: $text-sm;
       line-height: $lh-sm;
       color: $color-gray;
+
+      @include respond(sm) {
+        font-size: $text-2xs;
+        line-height: $lh-2xs;
+      }
     }
 
     .list-footer {
@@ -42,6 +57,11 @@
     position: absolute;
     top: 0;
     left: 50%;
+
+    @include respond(sm) {
+      position: static;
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -60,28 +80,43 @@
     border-radius: 16px;
     background-color: $color-primary;
 
+    @include respond(sm) {
+      flex-direction: column;
+      padding: 16px;
+      gap: 16px;
+    }
+
     .text-subscribe {
       font-size: $text-lg;
       font-weight: 700;
       line-height: $lh-lg;
       color: $color-white-secondary;
+
+      @include respond(sm) {
+        font-size: $text-lg-mobile;
+        line-height: $lh-lg-mobile;
+      }
     }
 
     .form-subscribe {
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      width: 707px;
+      max-width: 707px;
+      width: 100%;
       padding: 12px;
       border-radius: 14px;
       background-color: $color-white-secondary;
+
+      @include respond(sm) {
+        flex-direction: column;
+      }
 
       input {
         width: 100%;
         padding: 14px 28px;
         font-size: 14px;
         line-height: 20px;
-
         border: 1px solid $color-grey;
         border-radius: 8px;
       }
@@ -95,6 +130,10 @@
         border-radius: 8px;
         background-color: $color-primary;
         color: $color-white-secondary;
+
+        @include respond(sm) {
+          width: 100%;
+        }
       }
     }
   }
@@ -102,6 +141,12 @@
   .footer-navigation {
     display: flex;
     justify-content: space-between;
+
+    @include respond(sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 
     .list-social {
       display: flex;

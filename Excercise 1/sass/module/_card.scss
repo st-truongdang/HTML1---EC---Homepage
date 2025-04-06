@@ -1,5 +1,19 @@
 @use "../base/index" as *;
 
+.image-item {
+  @include respond(sm) {
+    display: none;
+  }
+}
+
+.mobile-item {
+  display: none;
+  @include respond(sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
 .card {
   display: block;
   padding: 8px;
@@ -8,7 +22,6 @@
 
   &-image {
     height: 100%;
-    aspect-ratio: 1/1;
     margin-bottom: 8px;
   }
 
@@ -67,6 +80,7 @@
     font-size: $text-sm;
     line-height: $lh-sm;
     color: $color-primary-dark;
+
     .dot {
       padding: 0 6px;
       line-height: $lh-xs;
