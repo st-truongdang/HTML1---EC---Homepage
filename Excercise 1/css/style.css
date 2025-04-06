@@ -59,6 +59,13 @@ body {
   line-height: 24px;
 }
 
+form,
+input,
+button,
+select {
+  font-family: "SVN-Gilroy", sans-serif;
+}
+
 @font-face {
   font-family: "SVN-Gilroy";
   src: url("../assets/fonts/SVN-Gilroy-Regular.otf") format("opentype");
@@ -87,7 +94,6 @@ body {
   width: auto;
   padding: 12px 28px;
   border-radius: 57px;
-  font-family: "SVN-Gilroy", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -196,14 +202,10 @@ body {
 
 .navigation .list-nav {
   display: flex;
-  list-style: none;
   gap: 48px;
 }
 .navigation .nav-link {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none;
   color: #003459;
 }
 
@@ -212,11 +214,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  height: fit-content;
   padding: 30px 0;
   background: transparent;
 }
@@ -243,15 +241,15 @@ body {
 }
 .header .header-action button {
   height: 44px;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 700;
 }
 .header .search-bar {
   display: flex;
+  align-items: center;
   gap: 12px;
   width: 280px;
   padding: 12px 20px;
-  border-radius: 16px;
+  border-radius: 46px;
   background: #fdfdfd;
 }
 .header .search-bar img {
@@ -264,17 +262,12 @@ body {
   gap: 4px;
   padding: 10px 8px 8px;
 }
-.header .switcher-currency .sw-currency {
-  width: 33px;
-  height: 23px;
-  padding: 0 4px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
-  color: #002a48;
+.header .switcher-currency .sw-flag {
+  margin-right: 2px;
 }
-.header .switcher-currency .arrow-icon {
-  padding: 10px 12px;
+.header .switcher-currency .sw-currency {
+  font-weight: 500;
+  color: #002a48;
 }
 
 .container {
