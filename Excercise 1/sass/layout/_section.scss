@@ -225,12 +225,22 @@
       text-align: center;
     }
   }
+
+  .section-title {
+    @include respond(sm) {
+      font-size: $text-xl;
+      line-height: $lh-xl;
+    }
+  }
+
   .section-subtitle {
     float: right;
 
     @include respond(sm) {
-      float: none;
       justify-self: center;
+      font-size: $text-lg;
+      line-height: $lh-lg;
+      float: none;
     }
   }
 
