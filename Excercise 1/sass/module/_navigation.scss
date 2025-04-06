@@ -1,0 +1,17 @@
+@use "../base/index" as *;
+
+.navigation {
+  .list-nav {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+  }
+
+  .nav-link {
+    font-weight: 700;
+    font-size: $text-base;
+    line-height: $lh-base;
+    text-decoration: none;
+    color: $color-primary;
+  }
+}

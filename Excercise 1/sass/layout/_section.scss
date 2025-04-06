@@ -7,3 +7,20 @@
     }
   }
 }
+
+//secition-brand
+.section.section-brands {
+  padding: 40px 0;
+
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .section-subtitle {
+    margin-right: 8px;
+  }
+  .brand-image {
+    width: 148px;
+  }
+}
