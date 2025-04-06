@@ -35,16 +35,29 @@
   &-title {
     font-weight: 700;
     color: $color-black-secondary;
+
+    @include respond(sm) {
+      font-size: $text-sm;
+      line-height: $lh-sm;
+    }
   }
 
   &-information {
     display: flex;
     gap: 4px;
 
+    @include respond(sm) {
+      flex-direction: column;
+    }
+
     .dot {
       padding: 0 6px;
       line-height: $lh-xs;
       color: $color-gray;
+
+      @include respond(sm) {
+        display: none;
+      }
     }
   }
 
@@ -67,6 +80,11 @@
     font-size: $text-sm;
     line-height: $lh-sm;
     color: $color-black-secondary;
+
+    @include respond(sm) {
+      font-size: $text-base;
+      line-height: $lh-base;
+    }
   }
 
   &-gift {

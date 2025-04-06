@@ -3,11 +3,24 @@
 .section {
   position: relative;
   padding: 60px 0;
+
+  @include respond(sm) {
+    padding: 40px 0;
+  }
+
   .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
+
+    @include respond(sm) {
+      padding: 0;
+    }
+
+    .arrow-icon {
+      padding: 0 6px;
+    }
   }
 
   .section-image {
@@ -44,9 +57,45 @@
     padding: 14px 0;
   }
 
+  .section-desc {
+    max-width: 500px;
+    width: 100%;
+    color: $color-normal;
+  }
+
   .section-btns {
     display: flex;
     gap: 20px;
+  }
+
+  .btn-mobile {
+    display: none;
+
+    @include respond(sm) {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+}
+
+.section-products {
+  @include respond(sm) {
+    padding: 30px 0 40px 0;
+  }
+
+  .section-header {
+    @include respond(sm) {
+      margin-bottom: 20px;
+    }
+  }
+  .section-content {
+    .card {
+      padding-bottom: 12px;
+    }
+    @include respond(sm) {
+      padding: 0;
+    }
   }
 }
 
@@ -174,8 +223,14 @@
   }
 
   .section-desc {
+    display: flex;
+    align-self: flex-start;
+    max-width: 400px;
+    width: 100%;
     margin-bottom: 34px;
-    color: $color-normal;
+    font-size: $text-xs;
+    line-height: $lh-xs;
+    font-weight: 500;
   }
 
   .btn-primary {
@@ -211,6 +266,9 @@
 
 //section banner reverse
 .section.section-reverse {
+  @include respond(sm) {
+    padding: 0;
+  }
   .section-content {
     position: absolute;
     right: 85px;
@@ -241,6 +299,16 @@
       font-size: $text-lg;
       line-height: $lh-lg;
       float: none;
+    }
+  }
+
+  .section-desc {
+    display: flex;
+    align-self: flex-end;
+
+    @include respond(sm) {
+      align-self: center;
+      max-width: 340px;
     }
   }
 
@@ -290,7 +358,7 @@
   }
 }
 
-//section product
+//hide section in mobile
 .section-products,
 .section-blogs {
   .section-header {
