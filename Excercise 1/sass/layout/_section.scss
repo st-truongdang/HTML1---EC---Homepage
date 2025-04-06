@@ -47,6 +47,8 @@
   }
 
   .section-desc {
+    max-width: 500px;
+    width: 100%;
     color: $color-normal;
   }
 
@@ -153,6 +155,10 @@
   }
 
   .section-desc {
+    display: flex;
+    align-self: flex-start;
+    max-width: 400px;
+    width: 100%;
     margin-bottom: 34px;
   }
 
@@ -180,11 +186,9 @@
 
 .section-banner {
   .section-desc {
-    p {
-      font-size: $text-xs;
-      line-height: $lh-xs;
-      font-weight: 500;
-    }
+    font-size: $text-xs;
+    line-height: $lh-xs;
+    font-weight: 500;
   }
 }
 
@@ -204,5 +208,10 @@
   .section-btns {
     justify-content: flex-end;
     transform: translateX(13px);
+  }
+
+  .section-desc {
+    display: flex;
+    align-self: flex-end;
   }
 }

@@ -417,6 +417,8 @@ body {
   padding: 14px 0;
 }
 .section .section-desc {
+  max-width: 500px;
+  width: 100%;
   color: #242b33;
 }
 .section .section-btns {
@@ -462,7 +464,7 @@ body {
 .section.section-main-banner .section-subtitle {
   display: block;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 46px;
   line-height: 60px;
   color: #002a48;
 }
@@ -496,7 +498,7 @@ body {
 }
 .section.section-banner .section-title {
   font-weight: 800;
-  font-size: 46px;
+  font-size: 52px;
   line-height: 68px;
 }
 .section.section-banner .section-subtitle {
@@ -508,6 +510,10 @@ body {
   color: #003459;
 }
 .section.section-banner .section-desc {
+  display: flex;
+  align-self: flex-start;
+  max-width: 400px;
+  width: 100%;
   margin-bottom: 34px;
 }
 .section.section-banner .btn-primary {
@@ -528,7 +534,7 @@ body {
   transform: translateX(-13px);
 }
 
-.section-banner .section-desc p {
+.section-banner .section-desc {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
@@ -546,6 +552,10 @@ body {
 .section.section-reverse .section-btns {
   justify-content: flex-end;
   transform: translateX(13px);
+}
+.section.section-reverse .section-desc {
+  display: flex;
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
