@@ -87,6 +87,7 @@ body {
   width: auto;
   padding: 12px 28px;
   border-radius: 57px;
+  font-family: "SVN-Gilroy", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -379,10 +380,6 @@ body {
     width: calc((100% - 0 * 12px) / 1);
   }
 }
-.section-products .section-content .card {
-  padding-bottom: 12px;
-}
-
 .section {
   position: relative;
   padding: 60px 0;
@@ -393,11 +390,7 @@ body {
   align-items: center;
   padding: 14px 0;
 }
-.section .section-image {
-  width: 100%;
-}
 .section .section-title {
-  margin: 0;
   font-weight: 700;
   font-size: 24px;
   text-transform: capitalize;
@@ -406,29 +399,12 @@ body {
 }
 .section .section-subtitle {
   width: fit-content;
-  margin: 0;
   font-weight: 500;
-  font-size: 16px;
   text-transform: capitalize;
-  line-height: 24px;
   color: #000000;
 }
 .section .section-content {
   padding: 14px 0;
-}
-.section .section-desc {
-  max-width: 500px;
-  width: 100%;
-  color: #242b33;
-}
-.section .section-btns {
-  display: flex;
-  gap: 20px;
-}
-
-.section-image img {
-  width: 100%;
-  height: auto;
 }
 
 .section.section-main-banner {
@@ -441,6 +417,9 @@ body {
   bottom: 0;
   right: 0;
 }
+.section.section-main-banner .section-image {
+  width: 100%;
+}
 .section.section-main-banner .section-content {
   position: absolute;
   top: 0;
@@ -451,7 +430,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
-  max-width: 600px;
+  max-width: 480px;
   width: 100%;
   z-index: 2;
 }
@@ -470,13 +449,13 @@ body {
 }
 .section.section-main-banner .section-desc {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
 }
-.section.section-main-banner button {
+.section.section-main-banner .section-btns {
+  display: flex;
+  gap: 20px;
+}
+.section.section-main-banner .section-btns button {
   padding: 11px 30px;
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .section.section-banner {
@@ -495,6 +474,7 @@ body {
   align-self: center;
   max-width: 600px;
   width: 100%;
+  padding: 0;
 }
 .section.section-banner .section-title {
   font-weight: 800;
@@ -510,52 +490,35 @@ body {
   color: #003459;
 }
 .section.section-banner .section-desc {
-  display: flex;
-  align-self: flex-start;
   max-width: 400px;
   width: 100%;
   margin-bottom: 34px;
-}
-.section.section-banner .btn-primary {
-  width: 163px;
-  padding: 11px 28px;
-  font-size: 16px;
-  line-height: 24px;
-}
-.section.section-banner .btn-primary image {
-  padding: 0 4px;
-}
-.section.section-banner .btn-outline {
-  padding: 11px 28px;
-  font-size: 16px;
-  line-height: 24px;
-}
-.section.section-banner .section-btns {
-  transform: translateX(-13px);
-}
-
-.section-banner .section-desc {
+  font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  font-weight: 500;
+}
+.section.section-banner .section-btns {
+  display: flex;
+  gap: 20px;
+}
+.section.section-banner .section-btns .btn-primary,
+.section.section-banner .section-btns .btn-outline {
+  padding: 11px 28px;
 }
 
 .section.section-reverse .section-content {
   position: absolute;
   right: 85px;
   left: auto;
+  align-items: flex-end;
   text-align: right;
 }
 .section.section-reverse .section-subtitle {
   float: right;
 }
-.section.section-reverse .section-btns {
-  justify-content: flex-end;
-  transform: translateX(13px);
-}
-.section.section-reverse .section-desc {
-  display: flex;
-  align-self: flex-end;
+
+.section.section-products .section-content .card {
+  padding-bottom: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
