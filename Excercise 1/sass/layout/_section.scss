@@ -4,11 +4,25 @@
   position: relative;
   padding: 60px 0;
 
+  @include respond(sm) {
+    padding: 40px 0;
+  }
+
+  .section-image {
+    img {
+      width: 100%;
+    }
+  }
+
   .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
+
+    @include respond(sm) {
+      padding: 0;
+    }
   }
 
   .section-title {
@@ -17,6 +31,11 @@
     text-transform: capitalize;
     line-height: $lh-lg;
     color: $color-primary;
+
+    @include respond(sm) {
+      font-size: $text-lg-mobile;
+      line-height: $lh-lg-mobile;
+    }
   }
 
   .section-subtitle {
@@ -24,10 +43,34 @@
     font-weight: 500;
     text-transform: capitalize;
     color: $color-black;
+
+    @include respond(sm) {
+      font-size: $text-sm;
+      line-height: $lh-sm;
+    }
   }
 
   .section-content {
     padding: 14px 0;
+  }
+
+  .btn-mobile {
+    display: none;
+
+    @include respond(sm) {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+
+  .mobile-image {
+    display: none;
+
+    @include respond(sm) {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
@@ -44,6 +87,19 @@
 
   .section-image {
     width: 100%;
+
+    .image-item {
+      @include respond(sm) {
+        display: none;
+      }
+    }
+    .mobile-image {
+      display: none;
+
+      @include respond(sm) {
+        display: block;
+      }
+    }
   }
 
   .section-content {
@@ -59,6 +115,13 @@
     max-width: 480px;
     width: 100%;
     z-index: 2;
+
+    @include respond(sm) {
+      top: 139px;
+      justify-content: unset;
+      gap: unset;
+      padding: 0 16px;
+    }
   }
 
   .section-title {
@@ -66,6 +129,12 @@
     font-size: $text-4xl;
     line-height: $lh-3xl;
     color: $color-primary-dark;
+
+    @include respond(sm) {
+      margin-bottom: 12px;
+      font-size: $text-2xl;
+      line-height: $lh-xxl;
+    }
   }
 
   .section-subtitle {
@@ -74,10 +143,19 @@
     font-size: $text-2xl;
     line-height: $lh-xxl;
     color: $color-primary-dark;
+
+    @include respond(sm) {
+      font-size: $text-xl-mobile;
+      line-height: $lh-xl-mobile;
+    }
   }
 
   .section-desc {
     font-weight: 500;
+
+    @include respond(sm) {
+      margin-bottom: 32px;
+    }
   }
 
   .section-btns {
@@ -148,6 +226,10 @@
 .section.section-brands {
   padding: 40px 0;
 
+  @include respond(sm) {
+    display: none;
+  }
+
   .section-title {
     display: flex;
     justify-content: center;
@@ -167,23 +249,117 @@
 }
 
 .section.section-reverse {
+  @include respond(sm) {
+    padding: 0;
+  }
+
+  .section-title {
+    @include respond(sm) {
+      align-self: center;
+      font-size: $text-xl;
+      line-height: $lh-xl;
+    }
+  }
+
+  .section-subtitle {
+    float: right;
+
+    @include respond(sm) {
+      justify-self: center;
+      font-size: $text-lg;
+      line-height: $lh-lg;
+      float: none;
+    }
+  }
+
   .section-content {
     position: absolute;
     right: 85px;
     left: auto;
     align-items: flex-end;
     text-align: right;
+
+    @include respond(sm) {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      align-self: flex-start;
+      text-align: center;
+    }
   }
 
-  .section-subtitle {
-    float: right;
+  .section-desc {
+    display: flex;
+    align-self: flex-end;
+
+    @include respond(sm) {
+      align-self: center;
+      max-width: 340px;
+    }
+  }
+  .section-btns {
+    justify-content: flex-end;
+    transform: translateX(13px);
+
+    @include respond(sm) {
+      align-self: center;
+      justify-content: center;
+      transform: translateX(0);
+    }
+  }
+
+  .section-image {
+    @include respond(sm) {
+      display: none;
+    }
+  }
+
+  .mobile-image {
+    display: none;
+    @include respond(sm) {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 .section.section-products {
+  @include respond(sm) {
+    padding: 30px 0 40px 0;
+  }
+
+  .section-header {
+    @include respond(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
   .section-content {
+    @include respond(sm) {
+      padding: 0;
+    }
+
     .card {
       padding-bottom: 12px;
     }
+  }
+}
+
+.section-products,
+.section-blogs {
+  .section-header {
+    button {
+      @include respond(sm) {
+        display: none;
+      }
+    }
+  }
+}
+
+.section-products-hidden,
+.section-banner-hidden {
+  @include respond(sm) {
+    display: none;
   }
 }
