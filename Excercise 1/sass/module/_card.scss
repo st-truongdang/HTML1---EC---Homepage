@@ -6,9 +6,29 @@
   border-radius: 12px;
   box-shadow: 0px 4px 28px -2px #00000014;
 
+  .image-item {
+    @include respond(sm) {
+      display: none;
+    }
+  }
+
   &-image {
     height: 100%;
     margin-bottom: 8px;
+
+    .image-item {
+      @include respond(sm) {
+        display: none;
+      }
+    }
+
+    .mobile-item {
+      display: none;
+      @include respond(sm) {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   &-content {
@@ -21,16 +41,29 @@
   &-title {
     font-weight: 700;
     color: $color-black-secondary;
+
+    @include respond(sm) {
+      font-size: $text-sm;
+      line-height: $lh-sm;
+    }
   }
 
   &-information {
     display: flex;
     gap: 4px;
 
+    @include respond(sm) {
+      flex-direction: column;
+    }
+
     .dot {
       padding: 0 6px;
       line-height: $lh-xs;
       color: $color-gray;
+
+      @include respond(sm) {
+        display: none;
+      }
     }
   }
 
@@ -53,6 +86,11 @@
     font-size: $text-sm;
     line-height: $lh-sm;
     color: $color-black-secondary;
+
+    @include respond(sm) {
+      font-size: $text-base;
+      line-height: $lh-base;
+    }
   }
 
   &-gift {
