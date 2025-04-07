@@ -347,8 +347,6 @@ select {
   width: 208px;
   padding: 14px 28px;
   border-radius: 8px;
-  font-size: 16px;
-  line-height: 24px;
   font-weight: 500;
   background-color: #003459;
   color: #fdfdfd;
@@ -598,9 +596,12 @@ select {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  font-size: 24px;
+  line-height: 36px;
 }
 .section.section-brands .section-subtitle {
   margin-right: 8px;
+  font-size: 16px;
 }
 .section.section-brands .brand-image {
   width: 148px;
