@@ -17,12 +17,12 @@ function addTodo(event) {
   // Create btn delete
   const btnX = document.createElement("button");
   btnX.classList.add("delBtn");
-  btnX.innerHTML = "Delete";
+  btnX.innerHTML = "X";
 
   //create btn done
   const btnDone = document.createElement("button");
   btnDone.classList.add("doneBtn");
-  btnDone.innerHTML = "Done";
+  btnDone.innerHTML = "Toggle";
 
   // append btns
   todo.appendChild(btnDone);
@@ -30,8 +30,8 @@ function addTodo(event) {
 
   document.getElementById("todo-list").appendChild(todo);
 
-  btnDone.onclick = function completeTodo() {
-    todo.classList.add("toggle");
+  btnDone.onclick = function toggleTodo() {
+    todo.classList.toggle("toggle");
   };
 
   btnX.onclick = function removeTodo() {

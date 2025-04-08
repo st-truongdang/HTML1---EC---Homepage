@@ -1,7 +1,8 @@
 #btn {
   padding: 10px 20px;
-  background-color: lightblue;
+  background-color: darkorange;
   color: white;
+  transform: translateX(-70px);
 }
 
 .toggle {
@@ -11,7 +12,7 @@
 .doneBtn {
   margin: 0 12px;
   padding: 5px 10px;
-  background-color: lime;
+  background-color: rgb(89, 198, 89);
   color: white;
 }
 
