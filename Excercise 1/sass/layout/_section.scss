@@ -157,8 +157,10 @@
     font-size: $text-base;
   }
 
-  .brand-image {
-    width: 148px;
+  .list-brand {
+    .brand-image {
+      width: 148px;
+    }
   }
 }
 
