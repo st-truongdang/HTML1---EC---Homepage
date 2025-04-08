@@ -1,0 +1,46 @@
+.section-container #input {
+  padding: 10px 20px;
+}
+.section-container #todo-list {
+  max-width: 720px;
+  list-style: none;
+}
+.section-container .list-item {
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+
+#btn {
+  padding: 10px 20px;
+  background-color: lightblue;
+  color: white;
+}
+
+.toggle {
+  text-decoration: line-through;
+}
+
+.doneBtn {
+  margin: 0 12px;
+  padding: 5px 10px;
+  background-color: lime;
+  color: white;
+}
+
+.delBtn {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
