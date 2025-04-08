@@ -1,0 +1,67 @@
+@use "../base/index" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 30px 0;
+  background: transparent;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    height: max-content;
+    z-index: 2;
+
+    .logo {
+      height: 40px;
+    }
+  }
+
+  .header-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    button {
+      height: 44px;
+      font-weight: 700;
+    }
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    width: 280px;
+    padding: 12px 20px;
+    border-radius: 46px;
+    background: $color-white-secondary;
+  }
+
+  .switcher-currency {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 8px 8px;
+
+    .sw-flag {
+      margin-right: 2px;
+    }
+
+    .sw-currency {
+      font-weight: 500;
+      color: $color-primary-dark;
+    }
+  }
+}

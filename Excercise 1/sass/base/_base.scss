@@ -5,3 +5,10 @@ body {
   font-size: $text-base;
   line-height: $lh-base;
 }
+
+form,
+input,
+button,
+select {
+  font-family: $font-primary;
+}
