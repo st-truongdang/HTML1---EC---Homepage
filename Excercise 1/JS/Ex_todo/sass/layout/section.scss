@@ -1,17 +1,30 @@
-.section-container {
-  #input {
-    width: 600px;
-    padding: 10px 20px;
+@use "../base/variables.scss" as *;
+
+.section-todo {
+  .section-title {
+    color: $color-primary;
   }
 
-  #todo-list {
-    max-width: 720px;
-    list-style: none;
-  }
+  .section-content {
+    .form-todo {
+      position: relative;
+      display: flex;
+    }
 
-  .list-item {
-    margin-bottom: 10px;
-    text-align: justify;
-    padding: 0 6px;
+    .input-todo {
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 36px;
+      border: 1px solid transparent;
+      background-color: $color-gray;
+    }
+
+    .todo-list {
+      padding: 0 20px;
+    }
+
+    .list-item {
+      margin-bottom: 6px;
+    }
   }
 }

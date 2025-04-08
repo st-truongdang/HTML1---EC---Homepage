@@ -1,50 +1,110 @@
-.section-container #input {
-  width: 600px;
-  padding: 10px 20px;
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-.section-container #todo-list {
-  max-width: 720px;
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
   list-style: none;
+  padding: 0;
 }
-.section-container .list-item {
-  margin-bottom: 10px;
-  text-align: justify;
-  padding: 0 6px;
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.section-todo .section-title {
+  color: #003459;
+}
+.section-todo .section-content .form-todo {
+  position: relative;
+  display: flex;
+}
+.section-todo .section-content .input-todo {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 36px;
+  border: 1px solid transparent;
+  background-color: #e9e7e7;
+}
+.section-todo .section-content .todo-list {
+  padding: 0 20px;
+}
+.section-todo .section-content .list-item {
+  margin-bottom: 6px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 600px;
   min-height: 700px;
   margin: 0 auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: antiquewhite;
 }
 
-#btn {
-  padding: 10px 20px;
-  background-color: darkorange;
-  color: white;
-  transform: translateX(-70px);
+.btn-add-todo {
+  position: absolute;
+  right: 0;
+  width: 140px;
+  padding: 16px 24px;
+  border-radius: 36px;
+  border: 1px solid transparent;
+  background-color: #e9762b;
+  color: #ffffff;
+}
+
+.btn-toggle {
+  margin-left: 390px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  background-color: #17ccde;
+  color: #ffffff;
+}
+
+.btn-delete {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: #e9e7e7;
+  color: #000000;
 }
 
 .toggle {
   text-decoration: line-through;
-}
-
-.doneBtn {
-  margin: 0 12px;
-  padding: 5px 10px;
-  background-color: rgb(89, 198, 89);
-  color: white;
-}
-
-.delBtn {
-  padding: 5px 10px;
-  background-color: red;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
