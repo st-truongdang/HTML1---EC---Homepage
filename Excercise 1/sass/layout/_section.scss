@@ -140,6 +140,30 @@
   }
 }
 
+//secition-brand
+.section.section-brands {
+  padding: 40px 0;
+
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: $text-lg;
+    line-height: $lh-lg;
+  }
+
+  .section-subtitle {
+    margin-right: 8px;
+    font-size: $text-base;
+  }
+
+  .list-brand {
+    .brand-image {
+      width: 148px;
+    }
+  }
+}
+
 .section.reverse {
   .section-content {
     position: absolute;
