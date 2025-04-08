@@ -39,7 +39,7 @@
     }
   }
 
-  .search-bar {
+  .search-form {
     display: flex;
     align-items: center;
     gap: $spacing-sm;
@@ -47,11 +47,6 @@
     padding: 12px 20px;
     border-radius: 46px;
     background: $color-white-secondary;
-
-    img {
-      width: 16.67px;
-      height: 16.67px;
-    }
   }
 
   .switcher-currency {

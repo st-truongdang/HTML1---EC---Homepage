@@ -88,7 +88,6 @@ select {
 }
 .btn {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 8px;
   width: auto;
@@ -243,7 +242,7 @@ select {
   height: 44px;
   font-weight: 700;
 }
-.header .search-bar {
+.header .search-form {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -251,10 +250,6 @@ select {
   padding: 12px 20px;
   border-radius: 46px;
   background: #fdfdfd;
-}
-.header .search-bar img {
-  width: 16.67px;
-  height: 16.67px;
 }
 .header .switcher-currency {
   display: flex;
@@ -271,7 +266,12 @@ select {
 }
 
 .footer {
-  background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
 }
 .footer .container {
   padding: 40px 16px;
@@ -504,17 +504,13 @@ select {
   width: 100%;
 }
 .section.section-main-banner .section-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
   max-width: 480px;
   width: 100%;
+  height: 100%;
   z-index: 2;
 }
 .section.section-main-banner .section-title {
@@ -607,14 +603,14 @@ select {
   width: 148px;
 }
 
-.section.section-reverse .section-content {
+.section.reverse .section-content {
   position: absolute;
   right: 85px;
   left: auto;
   align-items: flex-end;
   text-align: right;
 }
-.section.section-reverse .section-subtitle {
+.section.reverse .section-subtitle {
   float: right;
 }
 
