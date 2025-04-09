@@ -7,32 +7,27 @@ document.addEventListener('DOMContentLoaded', function () {
 function addTodo(event) {
   event.preventDefault();
   const todoInput = document.getElementById('input').value;
-  console.log(todoInput);
 
   // Create an 'todo' :
   const todo = document.createElement('li');
-  todo.innerHTML = `${todoInput}`;
   todo.classList.add('list-item');
+
+  const todoContent = document.createElement('span');
+  todoContent.innerHTML = `${todoInput}`;
 
   // Create btn delete
   const btnX = document.createElement('button');
-  btnX.classList.add('btn-delete');
+  btnX.classList.add('btn', 'btn-delete');
   btnX.innerHTML = 'X';
 
-  //create btn done
-  const btnDone = document.createElement('button');
-  btnDone.classList.add('btn-toggle');
-  btnDone.innerHTML = 'Toggle';
-
-  // append btns
-  todo.appendChild(btnDone);
+  todo.appendChild(todoContent);
   todo.appendChild(btnX);
 
   document.querySelector('.todo-list').appendChild(todo);
 
   //function toggle done status
-  btnDone.onclick = function toggleTodo() {
-    todo.classList.toggle('toggle');
+  todoContent.onclick = function toggleTodo() {
+    todoContent.classList.toggle('toggle');
   };
 
   //function remove todo

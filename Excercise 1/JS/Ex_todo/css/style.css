@@ -52,6 +52,7 @@ table {
 .section-todo .section-content .form-todo {
   position: relative;
   display: flex;
+  margin-bottom: 30px;
 }
 .section-todo .section-content .input-todo {
   width: 100%;
@@ -60,11 +61,20 @@ table {
   border: 1px solid transparent;
   background-color: #e9e7e7;
 }
+.section-todo .section-content .input-todo:focus {
+  outline: none;
+}
 .section-todo .section-content .todo-list {
   padding: 0 20px;
 }
 .section-todo .section-content .list-item {
-  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 13px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .container {
@@ -75,36 +85,37 @@ table {
   flex-direction: column;
 }
 
-.btn-add-todo {
+.btn {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn.btn-add-todo {
   position: absolute;
   right: 0;
   width: 140px;
   padding: 16px 24px;
   border-radius: 36px;
-  border: 1px solid transparent;
   background-color: #e9762b;
   color: #ffffff;
 }
 
-.btn-toggle {
-  margin-left: 390px;
-  padding: 5px 10px;
-  border: 1px solid transparent;
-  background-color: #17ccde;
-  color: #ffffff;
-}
-
 .btn-delete {
-  margin-left: 10px;
-  padding: 5px 10px;
+  height: 30px;
   border-radius: 50%;
-  border: 1px solid transparent;
-  background-color: #e9e7e7;
+  background-color: transparent;
   color: #000000;
+}
+.btn-delete:hover {
+  background-color: #e9e7e7;
 }
 
 .toggle {
   text-decoration: line-through;
+}
+.toggle .btn {
+  text-decoration: unset;
 }
 
 /*# sourceMappingURL=style.css.map */

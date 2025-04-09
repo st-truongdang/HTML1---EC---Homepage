@@ -1,33 +1,35 @@
-@use "../base/variables.scss" as *;
+@use '../base/variables.scss' as *;
 
-.btn-add-todo {
+.btn {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn.btn-add-todo {
   position: absolute;
   right: 0;
   width: 140px;
   padding: 16px 24px;
   border-radius: 36px;
-  border: 1px solid transparent;
   background-color: $color-secondary;
   color: $color-white;
 }
-
-.btn-toggle {
-  margin-left: 390px;
-  padding: 5px 10px;
-  border: 1px solid transparent;
-  background-color: $color-toggle;
-  color: $color-white;
-}
-
 .btn-delete {
-  margin-left: 10px;
-  padding: 5px 10px;
+  height: 30px;
   border-radius: 50%;
-  border: 1px solid transparent;
-  background-color: $color-gray;
+  background-color: transparent;
   color: $color-black;
+
+  &:hover {
+    background-color: $color-gray;
+  }
 }
 
 .toggle {
   text-decoration: line-through;
+
+  .btn {
+    text-decoration: unset;
+  }
 }
