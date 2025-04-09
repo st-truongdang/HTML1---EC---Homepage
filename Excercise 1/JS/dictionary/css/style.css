@@ -1,11 +1,109 @@
-.word-heading {
+.hidden {
   display: none;
 }
 
 .visible {
+  display: block !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
-.hidden {
-  display: none;
+ol,
+ul {
+  list-style: none;
+  padding: 0;
 }
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-dictionary {
+  padding: 40px 0;
+}
+.section-dictionary .section-search {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+.section-dictionary .section-search .search-input {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #e9e7e7;
+}
+.section-dictionary .section-search .button-input {
+  position: absolute;
+  right: 0;
+}
+.section-dictionary .section-message {
+  color: #de0a0a;
+}
+.section-dictionary .section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-dictionary .section-content .section-title {
+  font-size: 56px;
+  margin-bottom: 14px;
+}
+.section-dictionary .section-content .section-phonetic {
+  color: #b95cf4;
+}
+.section-dictionary .section-content .section-type {
+  padding: 10px 0;
+}
+.section-dictionary .section-content .word-heading {
+  margin-bottom: 6px;
+  color: #877e7e;
+}
+
+.button-input {
+  padding: 16px 24px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=style.css.map */

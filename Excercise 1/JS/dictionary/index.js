@@ -1,88 +1,84 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // constant
-  const form = document.getElementById('searchForm');
-  const word = document.querySelector('.section-title');
-  const phonetic = document.querySelector('.section-phonetic');
-  const definition = document.querySelector('.word-definition');
-  const partOfSpeech = document.querySelector('.word-type');
-  const message = document.querySelector('.section-message');
-  const heading = document.querySelector('.word-heading');
-  const contentWord = document.querySelector('.section-content');
+// constant
+const form = document.getElementById('searchForm');
+const word = document.querySelector('.section-title');
+const phonetic = document.querySelector('.section-phonetic');
+const definition = document.querySelector('.word-definition');
+const partOfSpeech = document.querySelector('.word-type');
+const message = document.querySelector('.section-message');
+const buttonSearch = document.querySelector('.button-input');
+const contentWord = document.querySelector('.section-content');
+const inputSearch = document.querySelector('.search-input');
+const heading = document.querySelector('.word-heading');
 
-  //create class
-  class Word {
-    constructor(word, phonetic, partOfSpeech, definition) {
-      this.word = word;
-      this.phonetic = phonetic;
-      this.partOfSpeech = partOfSpeech;
-      this.definition = definition;
-    }
+// create class
+class WordData {
+  constructor(data) {
+    this.word = data.word;
+    this.phonetic =
+      data?.phonetic ||
+      data?.phonetics?.[0]?.text ||
+      data?.phonetics?.[1]?.text ||
+      '(No phonetic)';
+    this.definition =
+      data?.meanings?.[0]?.definitions?.[0]?.definition || 'No definition';
+    this.partOfSpeech =
+      data?.meanings?.[0]?.partOfSpeech || 'No part of speech';
+  }
+}
+
+// function search word
+const searchWord = (event) => {
+  event.preventDefault();
+  const inputWord = inputSearch.value.trim();
+
+  //check input is null ?
+  if (!inputWord) {
+    message.textContent = 'Please enter the word!';
+    return;
   }
 
-  // function search word
-  const searchWord = (event) => {
-    event.preventDefault();
-    const inputWord = document.querySelector('.search-input').value.trim();
+  const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputWord}`;
+  message.textContent = 'Loading...';
+  buttonSearch.disabled = true;
+  contentWord.classList.add('hidden');
 
-    // check input is null ?
-    if (!inputWord) {
-      message.textContent = 'Please enter the word!';
-      contentWord.classList.add('hidden');
-      return;
-    }
+  //fetch data
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Cannot find word!');
+      }
+      return response.json();
+    })
+    .then((wordData) => {
+      const resultData = wordData[0];
+      const dictionaryData = new WordData(resultData);
 
-    // setup api
-    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputWord}`;
+      // use innet HTML
+      contentWord.innerHTML = `
+        <div class="section-header">
+            <h2 class="section-title">${dictionaryData.word}</h2>
+            <p class="section-phonetic">${dictionaryData.phonetic}</p>
+            <div class="section-type">
+            <span class="word-type">${dictionaryData.partOfSpeech}</span>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="word-heading">Meaning</p>
+            <p class="word-definition">${dictionaryData.definition}</p>
+        </div>
+        `;
 
-    // pending status
-    message.textContent = 'Loading...';
+      //set button abled and content visible when loading done
+      message.textContent = '';
+      buttonSearch.disabled = false;
+      contentWord.classList.remove('hidden');
+    })
+    .catch((error) => {
+      console.error(error);
+      message.textContent = 'Can not find the word';
+      buttonSearch.disabled = false;
+    });
+};
 
-    // hide content when loading
-    contentWord.classList.add('hidden');
-
-    //fetch api
-    fetch(apiUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Cannot find word!');
-        }
-        return response.json();
-      })
-      .then((wordData) => {
-        const resultData = wordData[0];
-
-        // Get data[0]
-        const dictionaryData = new Word(
-          resultData.word || '',
-          resultData.phonetic || '',
-          resultData.meanings[0].partOfSpeech || '',
-          resultData.meanings[0].definitions[0].definition || ''
-        );
-
-        // Render html
-        word.textContent = dictionaryData.word;
-        phonetic.textContent = dictionaryData.phonetic;
-        partOfSpeech.textContent = dictionaryData.partOfSpeech;
-        definition.textContent = dictionaryData.definition;
-
-        // show text 'meaning' when return success
-        heading.classList.add('visible');
-        // clear status pending
-        message.textContent = '';
-
-        // show content when loading complete
-        contentWord.classList.remove('hidden');
-      })
-      .catch((error) => {
-        console.error(error);
-        word.textContent = '';
-        phonetic.textContent = '';
-        partOfSpeech.textContent = '';
-        definition.textContent = '';
-        heading.classList.remove('visible');
-        message.textContent = 'Can not find the word';
-      });
-  };
-
-  form.addEventListener('submit', searchWord);
-});
+form.addEventListener('submit', searchWord);
