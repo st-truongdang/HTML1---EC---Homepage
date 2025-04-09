@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.section-todo .section-title {
+  color: #003459;
+}
+.section-todo .section-content .form-todo {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+}
+.section-todo .section-content .input-todo {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 36px;
+  border: 1px solid transparent;
+  background-color: #e9e7e7;
+}
+.section-todo .section-content .input-todo:focus {
+  outline: none;
+}
+.section-todo .section-content .todo-list {
+  padding: 0 20px;
+}
+.section-todo .section-content .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 13px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  min-height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn.btn-add-todo {
+  position: absolute;
+  right: 0;
+  width: 140px;
+  padding: 16px 24px;
+  border-radius: 36px;
+  background-color: #e9762b;
+  color: #ffffff;
+}
+
+.btn-delete {
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #000000;
+}
+.btn-delete:hover {
+  background-color: #e9e7e7;
+}
+
+.toggle {
+  text-decoration: line-through;
+}
+.toggle .btn {
+  text-decoration: unset;
+}
+
+/*# sourceMappingURL=style.css.map */
