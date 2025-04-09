@@ -1,5 +1,5 @@
 // constant
-const form = document.getElementById('searchForm');
+const form = document.getElementById('search-form');
 const word = document.querySelector('.section-title');
 const phonetic = document.querySelector('.section-phonetic');
 const definition = document.querySelector('.word-definition');
