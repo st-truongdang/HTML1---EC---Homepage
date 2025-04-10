@@ -13,7 +13,7 @@ const heading = document.querySelector('.word-heading');
 // create class
 class WordData {
   constructor(data) {
-    this.word = data.word;
+    this.word = data?.word;
     this.phonetic =
       data?.phonetic ||
       data?.phonetics?.[0]?.text ||
@@ -37,25 +37,15 @@ const searchWord = (event) => {
     return;
   }
 
+  //set api
   const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputWord}`;
   message.textContent = 'Loading...';
   buttonSearch.disabled = true;
   contentWord.classList.add('hidden');
 
-  //fetch data
-  fetch(apiUrl)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Cannot find word!');
-      }
-      return response.json();
-    })
-    .then((wordData) => {
-      const resultData = wordData[0];
-      const dictionaryData = new WordData(resultData);
-
-      // use innet HTML
-      contentWord.innerHTML = `
+  const renderDictionaryData = (dictionaryData) => {
+    // use inner HTML
+    contentWord.innerHTML = `
         <div class="section-header">
             <h2 class="section-title">${dictionaryData.word}</h2>
             <p class="section-phonetic">${dictionaryData.phonetic}</p>
@@ -69,15 +59,35 @@ const searchWord = (event) => {
         </div>
         `;
 
-      //set button abled and content visible when loading done
-      message.textContent = '';
-      buttonSearch.disabled = false;
-      contentWord.classList.remove('hidden');
+    //set button abled and content visible when loading done
+    message.textContent = '';
+    buttonSearch.disabled = false;
+    contentWord.classList.remove('hidden');
+  };
+
+  //function render error
+  const renderError = () => {
+    message.textContent = 'Can not find the word';
+    buttonSearch.disabled = false;
+  };
+
+  //fetch data
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Cannot find word!');
+      }
+      return response.json();
+    })
+    .then((wordData) => {
+      const resultData = wordData[0];
+      const dictionaryData = new WordData(resultData);
+
+      renderDictionaryData(dictionaryData);
     })
     .catch((error) => {
       console.error(error);
-      message.textContent = 'Can not find the word';
-      buttonSearch.disabled = false;
+      renderError();
     });
 };
 
