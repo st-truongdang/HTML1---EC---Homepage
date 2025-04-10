@@ -1,10 +1,9 @@
-import { Product } from '../js/base.js';
+import { Product } from './models/product.js';
 
-//const
 const listProduct = document.querySelector('.list-products');
 
 // function render list product
-const renderListProduct = (card, element) => {
+const renderListProduct = (card, productList) => {
   const listItem = document.createElement('li');
   listItem.classList.add('list-item', 'col-sm-6', 'col-3');
   listItem.innerHTML = `
@@ -25,14 +24,14 @@ const renderListProduct = (card, element) => {
                 <span class="dot">&#x2022;</span>
                 <span class="card-variant">
                   Age:
-                  <span class="card-option">${card.age}</span>
+                  <span class="card-option">${card.age} months</span>
                 </span>
               </p>
               <p class="card-price">${card.price} VND</p>
             </div>
           </a>
       `;
-  element.appendChild(listItem);
+  productList.appendChild(listItem);
 };
 
 // fetch data pets

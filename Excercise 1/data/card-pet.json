@@ -1,58 +1,58 @@
 [
   {
-    "Id": "MO231",
-    "Title": "MO231 - Pomeranian White",
-    "Gender": "Male",
-    "Age": "02 months",
-    "Price": 6900000
+    "id": "MO231",
+    "title": "MO231 - Pomeranian White",
+    "gender": "Male",
+    "age": 2,
+    "price": 6900000
   },
   {
-    "Id": "MO502",
-    "Title": "MO502 - Poodle Tiny Yellow",
-    "Gender": "Female",
-    "Age": "02 months",
-    "Price": 3900000
+    "id": "MO502",
+    "title": "MO502 - Poodle Tiny Yellow",
+    "gender": "Female",
+    "age": 2,
+    "price": 3900000
   },
   {
-    "Id": "MO102",
-    "Title": "MO102 - Poodle Tiny Sepia",
-    "Gender": "Male",
-    "Age": "02 months",
-    "Price": 4000000
+    "id": "MO102",
+    "title": "MO102 - Poodle Tiny Sepia",
+    "gender": "Male",
+    "age": 2,
+    "price": 4000000
   },
   {
-    "Id": "MO512",
-    "Title": "MO512 - Alaskan Malamute Grey",
-    "Gender": "Male",
-    "Age": "02 months",
-    "Price": 8900000
+    "id": "MO512",
+    "title": "MO512 - Alaskan Malamute Grey",
+    "gender": "Male",
+    "age": 2,
+    "price": 8900000
   },
   {
-    "Id": "MO231",
-    "Title": "MO231 - Pembroke Corgi Cream",
-    "Gender": "Male",
-    "Age": "02 months",
-    "Price": 7900000
+    "id": "MO231",
+    "title": "MO231 - Pembroke Corgi Cream",
+    "gender": "Male",
+    "age": 2,
+    "price": 7900000
   },
   {
-    "Id": "MO502",
-    "Title": "MO502 - Pembroke Corgi Tricolor",
-    "Gender": "Female",
-    "Age": "02 months",
-    "Price": 9000000
+    "id": "MO502",
+    "title": "MO502 - Pembroke Corgi Tricolor",
+    "gender": "Female",
+    "age": 2,
+    "price": 9000000
   },
   {
-    "Id": "MO231",
-    "Title": "MO231 - Pomeranian White",
-    "Gender": "Female",
-    "Age": "02 months",
-    "Price": 6500000
+    "id": "MO231",
+    "title": "MO231 - Pomeranian White",
+    "gender": "Female",
+    "age": 2,
+    "price": 6500000
   },
   {
-    "Id": "MO512",
-    "Title": "MO512 - Poodle Tiny Dairy Cow",
-    "Gender": "Male",
-    "Age": "02 months",
-    "Price": 5000000
+    "id": "MO512",
+    "title": "MO512 - Poodle Tiny Dairy Cow",
+    "gender": "Male",
+    "age": 2,
+    "price": 5000000
   }
 ]
