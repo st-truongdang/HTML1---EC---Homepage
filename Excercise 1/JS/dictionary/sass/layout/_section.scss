@@ -1,0 +1,51 @@
+@use '../base/index' as *;
+
+.section-dictionary {
+  padding: 40px 0;
+  .section-search {
+    position: relative;
+    display: flex;
+    margin-bottom: 40px;
+
+    .search-input {
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      outline: none;
+      background-color: $color-gray;
+    }
+
+    .button-input {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .section-message {
+    color: $color-alert;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .section-title {
+      font-size: $text-4xl;
+      margin-bottom: 14px;
+    }
+
+    .section-phonetic {
+      color: $color-purple;
+    }
+
+    .section-type {
+      padding: 10px 0;
+    }
+    .word-heading {
+      margin-bottom: 6px;
+      color: $color-grey;
+    }
+  }
+}
