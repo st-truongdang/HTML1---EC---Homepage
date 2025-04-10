@@ -3,6 +3,7 @@ import { Product } from '../js/base.js';
 //const
 const listProduct = document.querySelector('.list-products');
 
+// function render list product
 const renderListProduct = (card, element) => {
   const listItem = document.createElement('li');
   listItem.classList.add('list-item', 'col-sm-6', 'col-3');
@@ -27,13 +28,14 @@ const renderListProduct = (card, element) => {
                   <span class="card-option">${card.age}</span>
                 </span>
               </p>
-              <p class="card-price">${card.price}</p>
+              <p class="card-price">${card.price} VND</p>
             </div>
           </a>
       `;
   element.appendChild(listItem);
 };
 
+// fetch data pets
 const fetchProductData = () => {
   fetch('data/card-pet.json')
     .then((response) => response.json())
