@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-nav">
+          <div class="logo">
+            <h2 class="logo-heading">
+              <a href="./index.html" class="logo-link">
+                <img
+                  class="logo-img"
+                  src="./assets/imgs/logo-store.png"
+                  alt="logo"
+                />
+              </a>
+            </h2>
+          </div>
+          <nav class="navigation">
+            <ul class="list-nav">
+              <li class="list-item">
+                <a href="./index.html" class="nav-link">Home</a>
+              </li>
+              <li class="list-item">
+                <a href="" class="nav-link">Category</a>
+              </li>
+              <li class="list-item">
+                <a href="" class="nav-link">About</a>
+              </li>
+              <li class="list-item">
+                <a href="" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-action">
+          <form class="search-form">
+            <img src="./assets/icons/search-icon.png" alt="search Icon" />
+            <input type="text" placeholder="Search something here!" />
+          </form>
+          <button class="btn btn-primary">Join the community</button>
+          <div class="switcher-currency">
+            <img class="sw-flag" src="./assets/icons/flag-sw.png" alt="flag" />
+            <span class="sw-currency">VND</span>
+            <img
+              class="arrow-icon"
+              src="./assets/icons/arrow-down.png"
+              alt="down arrow"
+            />
+          </div>
+          <div class="header-cart">
+            <a class="cart-link" href="./cart.html">
+              <img
+                class="cart-image"
+                src="./assets/icons/cart-icon.png"
+                alt="cart"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-cart">
+        <div class="container">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th class="cart-header-info">Product</th>
+                <th class="cart-header-price">Price</th>
+                <th class="cart-header-quantity">Quantity</th>
+                <th class="cart-header-total">Total</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+          </table>
+          <div class="cart-summary">
+            <p class="cart-summary-total">
+              Total: <span id="total-price"></span>đ
+            </p>
+            <button class="btn btn-primary checkout-button">Checkout</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-subscribe">
+            <h3 class="text-subscribe">
+              Register now so you don't miss our programs
+            </h3>
+            <form class="form form-subscribe" method="POST">
+              <input type="email" name="email" placeholder="Enter your email" />
+              <button class="btn-subscribe">Subscribe now</button>
+            </form>
+          </div>
+          <div class="footer-navigation">
+            <nav class="navigation">
+              <ul class="list-nav">
+                <li class="list-item">
+                  <a href="" class="nav-link">Home</a>
+                </li>
+                <li class="list-item">
+                  <a href="" class="nav-link">Category</a>
+                </li>
+                <li class="list-item">
+                  <a href="" class="nav-link">About</a>
+                </li>
+                <li class="list-item">
+                  <a href="" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="socials">
+              <ul class="list-social">
+                <li class="list-item">
+                  <a href="" class="social-link">
+                    <img
+                      class="social-icon"
+                      src="./assets/icons/fb-icon.png"
+                      alt="facebook"
+                    />
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="" class="social-link">
+                    <img
+                      class="social-icon"
+                      src="./assets/icons/tw-icon.png"
+                      alt="twitter"
+                    />
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="" class="social-link">
+                    <img
+                      class="social-icon"
+                      src="./assets/icons/ins-icon.png"
+                      alt="instagram"
+                    />
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="" class="social-link">
+                    <img
+                      class="social-icon"
+                      src="./assets/icons/ytb-icon.png"
+                      alt="youtube"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p class="footer-authorized">© 2022 Monito. All rights reserved.</p>
+          <div class="logo">
+            <h2 class="logo-heading">
+              <a href="#" class="logo-link">
+                <img
+                  class="logo-img"
+                  src="./assets/imgs/logo-store.png"
+                  alt="logo"
+                />
+              </a>
+            </h2>
+          </div>
+          <div class="footer-wrapper">
+            <ul class="list-footer">
+              <li class="list-item">
+                <a href="" class="footer-link">Terms of Service</a>
+              </li>
+              <li class="list-item">
+                <a href="" class="footer-link">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/cart.js"></script>
+    <script type="module" src="js/models/cartItem.js"></script>
+  </body>
+</html>

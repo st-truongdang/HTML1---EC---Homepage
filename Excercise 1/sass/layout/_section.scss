@@ -1,4 +1,4 @@
-@use "../base/index" as *;
+@use '../base/index' as *;
 
 .section {
   position: relative;
@@ -183,5 +183,13 @@
     .card {
       padding-bottom: 12px;
     }
+  }
+}
+
+.section-cart {
+  padding-top: 100px;
+
+  .container {
+    padding: 60px 16px;
   }
 }
