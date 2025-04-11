@@ -285,7 +285,7 @@ select {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 10px 8px 8px;
+  padding: 10px 8px;
 }
 .header .switcher-currency .sw-flag {
   margin-right: 2px;
@@ -376,6 +376,51 @@ select {
   font-size: 14px;
   line-height: 20px;
   color: #667479;
+}
+
+.cart-table {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+.cart-table thead {
+  background-color: #99a2a5;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #fdfdfd;
+}
+.cart-table .cart-header-info {
+  width: 40%;
+  padding: 10px;
+}
+.cart-table .cart-header-price,
+.cart-table .cart-header-quantity,
+.cart-table .cart-header-total {
+  width: 20%;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart-summary-total {
+  color: #333;
+}
+
+.checkout-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00a7e7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .container {
@@ -634,6 +679,13 @@ select {
 
 .section.section-products .section-content .card {
   padding-bottom: 12px;
+}
+
+.section-cart {
+  padding-top: 100px;
+}
+.section-cart .container {
+  padding: 60px 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
